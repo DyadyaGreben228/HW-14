@@ -1,0 +1,212 @@
+#2
+#class Book:
+#    def __init__(self, title, year, publisher, genre, author, price):
+#        self.title = title
+#        self.year = year
+#        self.publisher = publisher
+#        self.genre = genre
+#        self.author = author
+#        self.price = price
+#
+#    def set_data(self, title=None, year=None, publisher=None, genre=None, author=None, price=None):
+#        if title is not None:
+#            self.title = title
+#        if year is not None:
+#            self.year = year
+#        if publisher is not None:
+#            self.publisher = publisher
+#        if genre is not None:
+#            self.genre = genre
+#        if author is not None:
+#            self.author = author
+#        if price is not None:
+#            self.price = price
+#
+#    def get_data(self):
+#        return {
+#            "title": self.title,
+#            "year": self.year,
+#            "publisher": self.publisher,
+#            "genre": self.genre,
+#            "author": self.author,
+#            "price": self.price,
+#        }
+#
+#    def input_data(self):
+#        self.title = input("Введите название книги: ")
+#        self.year = int(input("Введите год выпуска: "))
+#        self.publisher = input("Введите издателя: ")
+#        self.genre = input("Введите жанр: ")
+#        self.author = input("Введите автора: ")
+#        self.price = float(input("Введите цену: "))
+#
+#    def display_data(self):
+#        data = self.get_data()
+#        for key, value in data.items():
+#            print(f"{key.capitalize()}: {value}")
+#
+#book = Book()
+#book.input_data()
+#book.display_data()
+
+
+
+
+
+
+
+#1
+#class Car:
+#    def __init__(self, model, year, manufacturer, engine_volume, color, price):
+#        self.model = model
+#        self.year = year
+#        self.manufacturer = manufacturer
+#        self.engine_volume = engine_volume
+#        self.color = color
+#        self.price = price
+#
+#    def set_data(self, model=None, year=None, manufacturer=None, engine_volume=None, color=None, price=None):
+#        if model is not None:
+#            self.model = model
+#        if year is not None:
+#            self.year = year
+#        if manufacturer is not None:
+#            self.manufacturer = manufacturer
+#        if engine_volume is not None:
+#            self.engine_volume = engine_volume
+#        if color is not None:
+#            self.color = color
+#        if price is not None:
+#            self.price = price
+#
+#    def get_data(self):
+#        return {
+#            "model": self.model,
+#            "year": self.year,
+#            "manufacturer": self.manufacturer,
+#            "engine_volume": self.engine_volume,
+#            "color": self.color,
+#            "price": self.price,
+#        }
+#
+#    def input_data(self):
+#        self.model = input("Введите название модели: ")
+#        self.year = int(input("Введите год выпуска: "))
+#        self.manufacturer = input("Введите производителя: ")
+#        self.engine_volume = float(input("Введите объем двигателя: "))
+#        self.color = input("Введите цвет машины: ")
+#        self.price = float(input("Введите цену: "))
+#
+#    def display_data(self):
+#        data = self.get_data()
+#        for key, value in data.items():
+#            print(f"{key.capitalize()}: {value}")
+#
+#car = Car()
+#car.input_data()
+#car.display_data()
+
+
+
+
+
+
+
+
+
+
+
+#3
+#class Stadium:
+#    def __init__(self, name, opening_date, country, city, capacity):
+#        self.name = name
+#        self.opening_date = opening_date
+#        self.country = country
+#        self.city = city
+#        self.capacity = capacity
+#
+#    def set_data(self, name=None, opening_date=None, country=None, city=None, capacity=None):
+#        if name is not None:
+#            self.name = name
+#        if opening_date is not None:
+#            self.opening_date = opening_date
+#        if country is not None:
+#            self.country = country
+#        if city is not None:
+#            self.city = city
+#        if capacity is not None:
+#            self.capacity = capacity
+#
+#    def get_data(self):
+#        return {
+#            "name": self.name,
+#            "opening_date": self.opening_date,
+#            "country": self.country,
+#            "city": self.city,
+#            "capacity": self.capacity,
+#        }
+#
+#    def input_data(self):
+#        self.name = input("Введите название стадиона: ")
+#        self.opening_date = input("Введите дату открытия: ")
+#        self.country = input("Введите страну: ")
+#        self.city = input("Введите город: ")
+#        self.capacity = int(input("Введите вместимость: "))
+#
+#    def display_data(self):
+#        data = self.get_data()
+#        for key, value in data.items():
+#            print(f"{key.capitalize()}: {value}")
+#
+#stadium = Stadium()
+#stadium.input_data()
+#stadium.display_data()
+
+
+
+
+
+
+
+
+
+#4
+class MainClass:
+    def __init__(self, text=""):
+        self._text = text
+
+    def set_text(self, text=""):
+        self._text = text
+
+    def get_text(self):
+        return self._text
+
+
+class SubClass(MainClass):
+    def __init__(self, text="", number=0):
+        super().__init__(text)
+        self._number = number
+
+    def set_number(self, number):
+        self._number = number
+
+    def get_number(self):
+        return self._number
+
+
+main_obj = MainClass("Привет, мир!")
+print(main_obj.get_text())  
+
+main_obj.set_text("Новое значение")
+print(main_obj.get_text())  
+
+sub_obj = SubClass("Текст для подкласса", 42)
+print(sub_obj.get_text())  
+print(sub_obj.get_number()) 
+
+sub_obj.set_text("Измененный текст")
+sub_obj.set_number(100)
+print(sub_obj.get_text())   
+print(sub_obj.get_number()) 
+
+
